@@ -12,8 +12,8 @@ cap = cv2.VideoCapture(video_path)
 
 # Get video details for saving output
 fps = int(cap.get(cv2.CAP_PROP_FPS))
-width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) # Get width of the frames
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) # Get height of the frames
 out = cv2.VideoWriter("Detection_yolov8_roboflow_dataset/output.mp4", cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height))
 
 while cap.isOpened():
@@ -22,7 +22,7 @@ while cap.isOpened():
         break
 
     # Run YOLOv8 inference on frame
-    results = model(frame, conf=0.5)
+    results = model(frame, conf=0.5) # Set confidence threshold
 
     # Draw detections on frame
     annotated = results[0].plot()

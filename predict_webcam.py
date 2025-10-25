@@ -18,7 +18,7 @@ while True:
         break
 
     # Run inference
-    results = model(frame, conf=0.5)
+    results = model(frame, conf=0.5) # Set confidence threshold
     annotated = results[0].plot()
 
     # Show frame
