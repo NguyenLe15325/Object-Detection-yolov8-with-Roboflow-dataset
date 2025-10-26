@@ -45,25 +45,7 @@ pip install -r requirements.txt
 
 ### 2. Run Detection Scripts
 
-Run inference using your trained model (`best.pt`):
-
-**For image detection:**
-
-```bash
-python detect_image.py --model best.pt --source path/to/image.jpg
-```
-
-**For video detection:**
-
-```bash
-python detect_video.py --model best.pt --source path/to/video.mp4
-```
-
-**For webcam detection:**
-
-```bash
-python detect_webcam.py --model best.pt --cam-id 0
-```
+Change to correct directory for model and source then run the script.
 
 ---
 
