@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import cv2
 
 # Load model
-model = YOLO("Detection_yolov8_roboflow_dataset/best.pt")
+model = YOLO("Football_player_Detection/best.pt")
 
 # Open webcam
 cap = cv2.VideoCapture(0)
